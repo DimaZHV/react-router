@@ -31,8 +31,9 @@
 	.elem_list {
 		display: flex;
 		flex-direction: row;
-		// flex-wrap: wrap;
 		gap: 5px;
+		animation: appear 500ms forwards;
+
 		.buttons {
 			width: 90px;
 			height: 90px;
@@ -83,5 +84,20 @@
 	.error {
 		color: red;
 		padding-bottom: 200px;
+	}
+}
+@keyframes appear {
+	0% {
+		opacity: 0;
+		transform: translateX(-400px);
+		width: 100%;
+	}
+	50% {
+		opacity: 1;
+		width: 100%;
+	}
+	100% {
+		transform: translateY(0px);
+		rotate: (0deg);
 	}
 }
